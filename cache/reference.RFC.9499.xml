@@ -1,0 +1,19 @@
+<reference anchor="RFC9499" target="https://www.rfc-editor.org/info/rfc9499">
+<front>
+<title>DNS Terminology</title>
+<author fullname="P. Hoffman" initials="P." surname="Hoffman"/>
+<author fullname="K. Fujiwara" initials="K." surname="Fujiwara"/>
+<date month="March" year="2024"/>
+<abstract>
+<t>
+The Domain Name System (DNS) is defined in literally dozens of different RFCs. The terminology used by implementers and developers of DNS protocols, and by operators of DNS systems, has changed in the decades since the DNS was first defined. This document gives current definitions for many of the terms used in the DNS in a single document.
+</t>
+<t>
+This document updates RFC 2308 by clarifying the definitions of "forwarder" and "QNAME". It obsoletes RFC 8499 by adding multiple terms and clarifications. Comprehensive lists of changed and new definitions can be found in Appendices A and B.
+</t>
+</abstract>
+</front>
+<seriesInfo name="BCP" value="219"/>
+<seriesInfo name="RFC" value="9499"/>
+<seriesInfo name="DOI" value="10.17487/RFC9499"/>
+</reference>

@@ -1,0 +1,12 @@
+ <reference anchor="RFC9518" target="https://www.rfc-editor.org/info/rfc9518">
+  <front>
+    <title>Centralization, Decentralization, and Internet Standards</title>
+    <author fullname="M. Nottingham" initials="M." surname="Nottingham"/>
+    <date month="December" year="2023"/>
+    <abstract>
+      <t>This document discusses aspects of centralization that relate to Internet standards efforts. It argues that, while standards bodies have a limited ability to prevent many forms of centralization, they can still make contributions that assist in the decentralization of the Internet.</t>
+    </abstract>
+  </front>
+  <seriesInfo name="RFC" value="9518"/>
+  <seriesInfo name="DOI" value="10.17487/RFC9518"/>
+</reference>

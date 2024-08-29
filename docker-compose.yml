@@ -1,0 +1,6 @@
+version: '3.1'
+services:
+  mmark:
+    image: docker.vrsn.com/rsl/mmark:${IMAGE_VERSION:-latest}
+    volumes: 
+        - .:/app/rfc
