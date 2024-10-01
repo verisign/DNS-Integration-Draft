@@ -131,7 +131,7 @@ The global DNS has developed a technical, social, and policy infrastructure over
 ## Flexibility
 The global DNS provides the administrator of a namespace technical flexibility for how to use it.  Examples of this flexibility include which DNS provider to use (including the option to self-host), which DNS records to set, and which subdomains to delegate (if any).
 
-One specific example of this flexibility is how Bluesky can issue subdomains as a user's handle on Bluesky.  When users sign up for a Bluesky account, they can opt to be given a handle under the *.bsky.social domain space.  Bluesky can provide this flexibility because the DNS allows for it.
+One specific example of this flexibility is how Bluesky can issue subdomains as a user's handle on Bluesky.  When users sign up for a Bluesky account, they can opt to be given a handle under the `*.bsky.social` domain space.  Bluesky can provide this flexibility because the DNS allows for it.
 
 ## Verifiability
 DNS provides cryptographic verifiability of DNS zone data through DNSSEC.  DNSSEC is the standards-defined way of digitally signing and verifying DNS data.  For some application environments, such as those being used for payment use cases, this verifiability might be important to ensuring that funds are being appropriately routed.
