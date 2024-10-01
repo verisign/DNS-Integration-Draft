@@ -48,7 +48,7 @@ fullname="B. Newbold"
 organization = "Bluesky, PBC"
   [author.address]
   email = "bryan@blueskyweb.xyz"
-  uri = "https://www.blueskyweb.xyz/"
+  uri = "https://bsky.social/about"
   [author.address.postal]
   street = ""
   city = ""
