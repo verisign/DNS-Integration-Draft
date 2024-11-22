@@ -48,7 +48,7 @@ fullname="B. Newbold"
 organization = "Bluesky, PBC"
   [author.address]
   email = "bryan@blueskyweb.xyz"
-  uri = "https://www.blueskyweb.xyz/"
+  uri = "https://bsky.social/about"
   [author.address.postal]
   street = ""
   city = ""
@@ -131,7 +131,7 @@ The global DNS has developed a technical, social, and policy infrastructure over
 ## Flexibility
 The global DNS provides the administrator of a namespace technical flexibility for how to use it.  Examples of this flexibility include which DNS provider to use (including the option to self-host), which DNS records to set, and which subdomains to delegate (if any).
 
-One specific example of this flexibility is how Bluesky can issue subdomains as a user's handle on Bluesky.  When users sign up for a Bluesky account, they can opt to be given a handle under the *.bsky.social domain space.  Bluesky can provide this flexibility because the DNS allows for it.
+One specific example of this flexibility is how Bluesky can issue subdomains as a user's handle on Bluesky.  When users sign up for a Bluesky account, they can opt to be given a handle under the `*.bsky.social` domain space.  Bluesky can provide this flexibility because the DNS allows for it.
 
 ## Verifiability
 DNS provides cryptographic verifiability of DNS zone data through DNSSEC.  DNSSEC is the standards-defined way of digitally signing and verifying DNS data.  For some application environments, such as those being used for payment use cases, this verifiability might be important to ensuring that funds are being appropriately routed.
@@ -186,8 +186,20 @@ Resource capacity in a DNS integration impacts who is capable of performing the 
 {backmatter}
 
 # Integration Lessons Learned
-## Bluesky
-TO BE FILLED IN BY BLUESKY
+
+## Bluesky and AT Protocol
+
+Bluesky is a social media application built on the atproto (AT Protocol) network. In atproto, account identities are rooted in the Decentralized Identifier (DID) system, a W3C standard. Most DIDs are not human readable, so every account is also associated with a domain name, referred to as a "handle". Handles are for display only: they are not used in persistent references (URIs), and can change any time without breaking social graph connections. The handle/DID relationship must be verified bi-directionally, and DNS TXT records are one mechanism to verify the handle-to-DID direction. Bluesky handles are a DNS Integration.
+
+DNS was chosen as the handle namespace partially for technical maturity, efficiency, and cost reasons. A key design requirement was that new account signup should have no compromises compared to a centralized platform: registering a new handle needed to be fast (second-level latency), zero-cost, and reliable (near-zero downtime). DNS meets all of these requirements. The atproto network is design to accommodate billions of accounts, and DNS has also been shown to scale to hundreds of millions of registered domains without significant infrastructure burden. Service providers can use sub-domains as handles, and allocate them in large numbers even more efficiently.
+
+Bluesky is a small young company building a novel network protocol. DNS is a mature and broadly adopted technology, meaning developers are already familiar with it and have software implementations and infrastructure at hand. The system is financially sustainable with a international multi-stakeholder governance structure, which means developers can build on it with confidence.
+
+DNS is global, distributed, and consistent which are important for a distributed network. Independent service providers and software clients see the same view of the domain system, which means that end users will have a coherent experience regardless of provider or client.
+
+Domain names are well established in society. Domain names are conceptually familiar and recognizable to most network users. Policies, legal precedent, and dispute resolution procedures are mature across many jurisdictions. These help address the perential challenges of impersonation and trademark disputes. In particular, many culturally relevant institutions and individuals already have domain names with an established reputation. The flexibility of DNS allows those existing domains to be reused in a new context.
+
+To maximize these benefits, it is important that handle validation is consistent and reproducible by any party. Any valid domain name (hostname) can be used as a handle and that all handles are valid globally resolvable domain names. This ensures that every network service can resolve any handle in the network, without requiring special DNS software. Use of the TXT record type has broad support in both client software and in DNS management interfaces. Limited use of caching helps reduce breakage due to short network service downtimes, while still ensuring that handle validity lifetime is tied to domain registration lifetime. In other words, changes in domain control are reflected in changes on handle validity within a reasonable time window, reducing the chance of misattribution. The atproto handle specification text largely defers to IETF DNS standards, with the goal of maintaining compatibility as norms and best practices evolve over time.
 
 ## Ethereum Name Service
 TO BE FILLED IN BY ENS
